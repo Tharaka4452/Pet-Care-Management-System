@@ -1,0 +1,183 @@
+name: ❓ Question/Help
+description: Ask a question or get help with the Pet Care Management System
+title: "[Question]: "
+labels: ["question", "help-wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reaching out! 🐾
+        
+        We're here to help you with any questions about the Pet Care Management System.
+
+  - type: dropdown
+    id: question_type
+    attributes:
+      label: ❓ Type of Question
+      description: What kind of help do you need?
+      options:
+        - Setup/Installation Help
+        - Configuration Questions
+        - Usage/How-to Questions
+        - API Documentation
+        - Database Questions
+        - Deployment Questions
+        - Troubleshooting
+        - General Questions
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 🎯 Related Component
+      description: Which part of the system is your question about?
+      options:
+        - Pet Owner Portal (Frontend)
+        - Professional Portal (Doctor Interface)
+        - Administrative Portal
+        - Backend API
+        - Database
+        - Authentication System
+        - E-commerce System
+        - Appointment System
+        - Adoption System
+        - Lost & Found System
+        - Event Management
+        - Notification System
+        - General/Cross-platform
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: ⏰ Urgency Level
+      description: How urgent is your question?
+      options:
+        - Critical (Blocking my work)
+        - High (Need help soon)
+        - Medium (Can wait a few days)
+        - Low (Just curious)
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: 📝 Question Title
+      description: A clear, concise title for your question
+      placeholder: e.g., "How to set up MongoDB connection for local development?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: ❓ Your Question
+      description: Please describe your question in detail
+      placeholder: What would you like to know?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📋 Context
+      description: Provide context about what you're trying to achieve
+      placeholder: |
+        - What are you trying to do?
+        - What have you tried so far?
+        - What's your current setup?
+
+  - type: textarea
+    id: steps_taken
+    attributes:
+      label: 🔄 Steps You've Taken
+      description: What have you already tried to solve this?
+      placeholder: |
+        1. I tried...
+        2. I looked at...
+        3. I searched for...
+
+  - type: textarea
+    id: error_messages
+    attributes:
+      label: ❌ Error Messages
+      description: If you're getting any errors, please paste them here
+      placeholder: Paste any error messages or console output...
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ Your Environment
+      description: Please provide your environment details
+      placeholder: |
+        - OS: [e.g., Windows 10, macOS, Ubuntu]
+        - Browser: [e.g., Chrome, Firefox, Safari] (if applicable)
+        - Node.js Version: [e.g., 18.0.0]
+        - Database: [e.g., MongoDB Atlas, Local MongoDB]
+        - Any other relevant details...
+
+  - type: textarea
+    id: code_examples
+    attributes:
+      label: 💻 Code Examples
+      description: If applicable, share relevant code snippets
+      placeholder: |
+        ```javascript
+        // Your code here
+        ```
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots
+      description: If applicable, add screenshots to help explain your question
+      placeholder: Drag and drop screenshots here...
+
+  - type: dropdown
+    id: experience_level
+    attributes:
+      label: 👨‍💻 Experience Level
+      description: What's your experience level with this technology?
+      options:
+        - Beginner (Just starting out)
+        - Intermediate (Some experience)
+        - Advanced (Experienced developer)
+        - Expert (Very experienced)
+        - Not sure
+
+  - type: checkboxes
+    id: research
+    attributes:
+      label: 🔍 Research Done
+      description: What have you already checked?
+      options:
+        - label: I have read the README.md file
+        - label: I have searched existing issues
+        - label: I have checked the documentation
+        - label: I have searched online/Stack Overflow
+        - label: I have tried debugging myself
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📝 Additional Information
+      description: Any other information that might be helpful
+      placeholder: Anything else that might help us understand your question better...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have provided a clear description of my question
+          required: true
+        - label: I have included relevant context and environment details
+          required: true
+        - label: I understand this is a question and not a bug report
+          required: true

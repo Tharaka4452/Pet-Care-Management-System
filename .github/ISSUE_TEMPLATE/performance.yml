@@ -1,0 +1,201 @@
+name: ⚡ Performance Issue
+description: Report performance problems or optimization suggestions
+title: "[Performance]: "
+labels: ["performance", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚡ **Performance Issue Report**
+        
+        Help us improve the performance of the Pet Care Management System!
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 🎯 Affected Component
+      description: Which part of the system is experiencing performance issues?
+      options:
+        - Pet Owner Portal (Frontend)
+        - Professional Portal (Doctor Interface)
+        - Administrative Portal
+        - Backend API
+        - Database Queries
+        - File Upload/Download
+        - Image Processing
+        - Search Functionality
+        - Appointment Booking
+        - Pet Registration
+        - E-commerce System
+        - Event Management
+        - Notification System
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🚨 Performance Impact
+      description: How severe is the performance issue?
+      options:
+        - Critical (System unusable, crashes)
+        - High (Significantly slow, affects user experience)
+        - Medium (Noticeably slow but usable)
+        - Low (Minor performance degradation)
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: 📝 Performance Issue Title
+      description: A clear, concise title for the performance issue
+      placeholder: e.g., "Pet list loading takes 30+ seconds"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📋 Performance Issue Description
+      description: Describe the performance problem in detail
+      placeholder: What performance issue are you experiencing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: How to reproduce the performance issue
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Wait for '...'
+        4. Observe slow performance
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_performance
+    attributes:
+      label: ⚡ Expected Performance
+      description: What performance do you expect?
+      placeholder: |
+        - Page should load in under 2 seconds
+        - Search results should appear in under 1 second
+        - File upload should complete in under 10 seconds
+        - etc.
+
+  - type: textarea
+    id: actual_performance
+    attributes:
+      label: 🐌 Actual Performance
+      description: What performance are you actually seeing?
+      placeholder: |
+        - Page takes 15+ seconds to load
+        - Search results take 5+ seconds
+        - File upload times out after 30 seconds
+        - etc.
+
+  - type: textarea
+    id: measurements
+    attributes:
+      label: 📊 Performance Measurements
+      description: If you have specific measurements, please share them
+      placeholder: |
+        - Load time: 15.3 seconds
+        - Memory usage: 500MB
+        - CPU usage: 90%
+        - Network requests: 150+
+        - Database queries: 25+
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ Environment
+      description: Your system environment
+      placeholder: |
+        - OS: [e.g., Windows 10, macOS, Ubuntu]
+        - Browser: [e.g., Chrome, Firefox, Safari]
+        - Browser Version: [e.g., 91.0]
+        - Device: [e.g., Desktop, Mobile, Tablet]
+        - Network: [e.g., WiFi, Ethernet, 4G]
+        - Data Size: [e.g., 1000+ pets, 500+ users]
+
+  - type: textarea
+    id: console_logs
+    attributes:
+      label: 📋 Console Logs/Network Tab
+      description: Any relevant console logs or network performance data
+      placeholder: |
+        - Console errors: [paste any errors]
+        - Network requests: [slow requests]
+        - Memory usage: [if available]
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots
+      description: Screenshots showing performance issues (loading states, slow responses, etc.)
+      placeholder: Drag and drop screenshots here...
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 🔄 Frequency
+      description: How often does this performance issue occur?
+      options:
+        - Always (100% of the time)
+        - Often (75% of the time)
+        - Sometimes (50% of the time)
+        - Rarely (25% of the time)
+        - Once (I only tried it once)
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 🔧 Workaround
+      description: Have you found any workarounds for this performance issue?
+      placeholder: |
+        - Refreshing the page helps
+        - Using a different browser works better
+        - Clearing cache improves performance
+        - etc.
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: 💡 Optimization Suggestions
+      description: Do you have any suggestions for improving performance?
+      placeholder: |
+        - Implement pagination for large lists
+        - Add loading indicators
+        - Optimize database queries
+        - Use lazy loading for images
+        - etc.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have provided specific performance measurements
+          required: true
+        - label: I have described the steps to reproduce the issue
+          required: true
+        - label: I have included my environment details
+          required: true
+        - label: I understand this is about performance, not functionality
+          required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📝 Additional Context
+      description: Any other information about the performance issue
+      placeholder: Any additional context that might be helpful...

@@ -1,0 +1,143 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior in the Pet Care Management System
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! 🐾
+        
+        Please provide as much detail as possible to help us reproduce and fix the issue.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 🎯 Component/Portal
+      description: Which part of the system is affected?
+      options:
+        - Pet Owner Portal (Frontend)
+        - Professional Portal (Doctor Interface)
+        - Administrative Portal
+        - Backend API
+        - Database
+        - Authentication System
+        - E-commerce System
+        - Appointment System
+        - Adoption System
+        - Lost & Found System
+        - Event Management
+        - Notification System
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🚨 Severity
+      description: How severe is this bug?
+      options:
+        - Critical (System crash, data loss)
+        - High (Major functionality broken)
+        - Medium (Minor functionality affected)
+        - Low (Cosmetic issue)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 📱 Version
+      description: What version of the application are you using?
+      placeholder: e.g., v1.0.0, commit hash, or "latest"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: Describe the bug in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Expected Behavior
+      description: What you expected to happen
+      placeholder: A clear description of what you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Actual Behavior
+      description: What actually happened
+      placeholder: A clear description of what actually happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots/Error Messages
+      description: If applicable, add screenshots or error messages to help explain your problem
+      placeholder: Drag and drop screenshots here or paste error messages
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ Environment
+      description: Please provide your environment details
+      placeholder: |
+        - OS: [e.g., Windows 10, macOS, Ubuntu]
+        - Browser: [e.g., Chrome, Firefox, Safari]
+        - Browser Version: [e.g., 22]
+        - Node.js Version: [e.g., 18.0.0]
+        - Database: [e.g., MongoDB Atlas, Local MongoDB]
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 📋 Console Logs/Error Logs
+      description: If applicable, paste any relevant console logs or error messages
+      placeholder: Paste logs here...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have provided all the requested information
+          required: true
+        - label: I understand this is a bug report and not a feature request
+          required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📝 Additional Context
+      description: Add any other context about the problem here
+      placeholder: Any additional information that might be helpful...

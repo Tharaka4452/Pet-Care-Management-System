@@ -1,0 +1,178 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for the Pet Care Management System
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! 🐾
+        
+        Please provide as much detail as possible to help us understand your request.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 🎯 Target Component/Portal
+      description: Which part of the system would this feature affect?
+      options:
+        - Pet Owner Portal (Frontend)
+        - Professional Portal (Doctor Interface)
+        - Administrative Portal
+        - Backend API
+        - Database
+        - Authentication System
+        - E-commerce System
+        - Appointment System
+        - Adoption System
+        - Lost & Found System
+        - Event Management
+        - Notification System
+        - Mobile App (Future)
+        - Cross-platform
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚀 Priority Level
+      description: How important is this feature to you?
+      options:
+        - Critical (Essential for basic functionality)
+        - High (Significantly improves user experience)
+        - Medium (Nice to have improvement)
+        - Low (Minor enhancement)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user_type
+    attributes:
+      label: 👥 Target User Type
+      description: Who would benefit from this feature?
+      options:
+        - Pet Owners
+        - Veterinarians
+        - Groomers
+        - Pet Trainers
+        - System Administrators
+        - Store Administrators
+        - Adoption Coordinators
+        - All Users
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: 📝 Feature Title
+      description: A clear, concise title for your feature request
+      placeholder: e.g., "Add pet vaccination reminder notifications"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📋 Feature Description
+      description: A clear and detailed description of the feature you'd like to see
+      placeholder: Describe the feature in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🤔 Problem Statement
+      description: What problem does this feature solve?
+      placeholder: Describe the current limitation or problem this feature would address...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: Describe your proposed solution
+      placeholder: How would you like this feature to work?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternative Solutions
+      description: Describe any alternative solutions you've considered
+      placeholder: Are there other ways this problem could be solved?
+
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: 📚 Use Cases
+      description: Describe specific use cases for this feature
+      placeholder: |
+        1. As a pet owner, I want to...
+        2. As a veterinarian, I need to...
+        3. As an admin, I should be able to...
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: Define what "done" looks like for this feature
+      placeholder: |
+        - [ ] Feature should allow users to...
+        - [ ] Feature should integrate with...
+        - [ ] Feature should display...
+        - [ ] Feature should validate...
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: ⚡ Implementation Complexity
+      description: How complex do you think this feature would be to implement?
+      options:
+        - Simple (Minor changes, few hours)
+        - Medium (Moderate changes, few days)
+        - Complex (Significant changes, weeks)
+        - Very Complex (Major architectural changes, months)
+        - Not sure
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: 🎨 Mockups/Wireframes
+      description: If you have any mockups, wireframes, or design ideas, please share them
+      placeholder: Drag and drop images here or describe your design ideas...
+
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: 🔧 Technical Notes
+      description: Any technical considerations or implementation details
+      placeholder: Database changes, API modifications, third-party integrations, etc.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have provided a clear description of the feature
+          required: true
+        - label: I understand this is a feature request and not a bug report
+          required: true
+        - label: I am willing to help implement this feature if needed
+          required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📝 Additional Context
+      description: Add any other context, screenshots, or information about the feature request
+      placeholder: Any additional information that might be helpful...

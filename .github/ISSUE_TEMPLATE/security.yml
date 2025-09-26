@@ -1,0 +1,125 @@
+name: 🔒 Security Issue
+description: Report a security vulnerability or concern
+title: "[Security]: "
+labels: ["security", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🔒 **Security Issue Report**
+        
+        Thank you for taking the time to report a security issue! We take security seriously and appreciate your help in keeping our system safe.
+        
+        **⚠️ Important:** Please do not publicly disclose security vulnerabilities until we have had a chance to address them.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🚨 Security Severity
+      description: How severe is this security issue?
+      options:
+        - Critical (Immediate threat, data breach risk)
+        - High (Significant security risk)
+        - Medium (Moderate security concern)
+        - Low (Minor security issue)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 🎯 Affected Component
+      description: Which part of the system is affected?
+      options:
+        - Authentication System
+        - Database
+        - API Endpoints
+        - File Upload System
+        - Payment Processing
+        - User Data
+        - Pet Data
+        - Professional Data
+        - Admin Functions
+        - Cross-site Scripting (XSS)
+        - SQL Injection
+        - Authentication Bypass
+        - Data Exposure
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Security Issue Description
+      description: Describe the security vulnerability in detail
+      placeholder: Provide a clear description of the security issue...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: How can this security issue be reproduced?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Enter '...'
+        4. Observe the security issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: 💥 Potential Impact
+      description: What could an attacker do with this vulnerability?
+      placeholder: Describe the potential impact and risks...
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ Environment
+      description: Environment where the issue was discovered
+      placeholder: |
+        - Version: [e.g., v1.0.0]
+        - Browser: [e.g., Chrome 91]
+        - OS: [e.g., Windows 10]
+        - Any other relevant details...
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 📸 Evidence/Screenshots
+      description: Provide screenshots or other evidence (be careful not to expose sensitive data)
+      placeholder: Drag and drop screenshots here (ensure no sensitive data is visible)...
+
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: 💡 Suggested Fix
+      description: Do you have any suggestions for how to fix this issue?
+      placeholder: If you have ideas for fixing this issue, please share them...
+
+  - type: checkboxes
+    id: responsible_disclosure
+    attributes:
+      label: 📋 Responsible Disclosure Agreement
+      description: Please confirm the following
+      options:
+        - label: I understand this is a security issue and will not publicly disclose it
+          required: true
+        - label: I will give the maintainers reasonable time to address the issue
+          required: true
+        - label: I will not use this vulnerability for malicious purposes
+          required: true
+        - label: I understand that this report is made in good faith
+          required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📝 Additional Information
+      description: Any other relevant information about the security issue
+      placeholder: Any additional context that might be helpful...

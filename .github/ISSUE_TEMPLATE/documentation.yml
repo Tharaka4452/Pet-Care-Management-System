@@ -1,0 +1,189 @@
+name: 📚 Documentation
+description: Suggest improvements to documentation or report documentation issues
+title: "[Docs]: "
+labels: ["documentation", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation! 📚
+        
+        Good documentation is crucial for the success of any project.
+
+  - type: dropdown
+    id: doc_type
+    attributes:
+      label: 📄 Documentation Type
+      description: What type of documentation needs attention?
+      options:
+        - README.md
+        - API Documentation
+        - Installation Guide
+        - User Guide
+        - Developer Guide
+        - Code Comments
+        - Error Messages
+        - Configuration Guide
+        - Deployment Guide
+        - Contributing Guide
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: 🔧 Issue Type
+      description: What kind of documentation issue is this?
+      options:
+        - Missing Documentation
+        - Outdated Information
+        - Unclear/Confusing Content
+        - Incorrect Information
+        - Formatting Issues
+        - Typos/Grammar
+        - Missing Examples
+        - Translation Needed
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚀 Priority Level
+      description: How important is this documentation improvement?
+      options:
+        - Critical (Blocks users from using the system)
+        - High (Significantly impacts user experience)
+        - Medium (Improves clarity and usability)
+        - Low (Minor improvement)
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: 📝 Documentation Issue Title
+      description: A clear, concise title for the documentation issue
+      placeholder: e.g., "README missing environment variables setup"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📋 Description
+      description: Describe the documentation issue or improvement needed
+      placeholder: What documentation needs to be improved?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_state
+    attributes:
+      label: 📖 Current State
+      description: What does the current documentation say (or not say)?
+      placeholder: Describe what's currently documented or what's missing...
+
+  - type: textarea
+    id: expected_state
+    attributes:
+      label: ✅ Expected State
+      description: What should the documentation say or include?
+      placeholder: Describe what the documentation should contain...
+
+  - type: textarea
+    id: affected_sections
+    attributes:
+      label: 📍 Affected Sections
+      description: Which specific sections or files are affected?
+      placeholder: |
+        - File: README.md, Section: Installation
+        - File: API docs, Section: Authentication
+        - File: User guide, Section: Pet registration
+
+  - type: textarea
+    id: proposed_changes
+    attributes:
+      label: 💡 Proposed Changes
+      description: What specific changes would you like to see?
+      placeholder: |
+        - Add step-by-step instructions for...
+        - Include code examples for...
+        - Add troubleshooting section for...
+        - Update screenshots to show...
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: 📝 Examples/Content
+      description: If you have specific content or examples to suggest, please share them
+      placeholder: |
+        ```markdown
+        # Suggested content here
+        ```
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots
+      description: If applicable, add screenshots to illustrate the issue
+      placeholder: Drag and drop screenshots here...
+
+  - type: dropdown
+    id: target_audience
+    attributes:
+      label: 👥 Target Audience
+      description: Who would benefit from this documentation improvement?
+      options:
+        - New Users/Developers
+        - Experienced Developers
+        - System Administrators
+        - End Users (Pet Owners)
+        - Professionals (Vets, Groomers)
+        - Contributors
+        - All Users
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: 🎯 Impact
+      description: How would this documentation improvement help users?
+      placeholder: This improvement would help users by...
+
+  - type: checkboxes
+    id: research
+    attributes:
+      label: 🔍 Research Done
+      description: What have you already checked?
+      options:
+        - label: I have read the current documentation
+        - label: I have checked if this is already documented elsewhere
+        - label: I have searched existing issues for similar requests
+        - label: I have tested the current documentation myself
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have provided a clear description of the documentation issue
+          required: true
+        - label: I have specified which sections/files are affected
+          required: true
+        - label: I understand this is about documentation, not code functionality
+          required: true
+        - label: I am willing to help improve the documentation if needed
+          required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📝 Additional Context
+      description: Any other context or information about the documentation issue
+      placeholder: Any additional information that might be helpful...

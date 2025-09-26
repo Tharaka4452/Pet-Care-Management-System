@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🐾 Pet Care Management System Community
+    url: https://github.com/yourusername/pet-care-management-system/discussions
+    about: Ask questions, share ideas, and connect with other users
+  - name: 📚 Documentation
+    url: https://github.com/yourusername/pet-care-management-system/wiki
+    about: Browse our comprehensive documentation and guides
+  - name: 💬 General Discussion
+    url: https://github.com/yourusername/pet-care-management-system/discussions/categories/general
+    about: General discussions about the Pet Care Management System
